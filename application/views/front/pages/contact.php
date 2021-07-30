@@ -1,3 +1,8 @@
+<style type="text/css">
+  .color_contact {
+    background-color: <?php echo $settings->first_color; ?>!important;
+}
+</style>
 <section class="my-5 top_margin">
   <div class="container">
     <h2 class="font-weight-bold text-center header__text"><?= $current_page->subtitle ?></h2>
@@ -26,7 +31,7 @@
       <div class="col-lg-5 mb-lg-0 mb-4">
         <div class="card">
           <div class="card-body">
-            <div class="form-header unique-color-dark">
+            <div class="form-header color_contact">
               <h3 class="mt-2"><i class="fas fa-envelope"></i> Skontaktuj się z nami:</h3>
             </div>
             <form action="<?= base_url(); ?>mailer/send" method="POST" id="contact-form">
@@ -63,7 +68,7 @@
                 </label>
               </div>
               <div class="text-center">
-                <button class="btn unique-color-dark text-white">Wyślij</button>
+                <button class="btn color_contact text-white">Wyślij</button>
               </div>
             </form>
           </div>
@@ -76,7 +81,7 @@
         </div>
         <div class="row text-center">
           <div class="col-md-4">
-            <a target="_blank" href="https://www.google.com/maps/place/<?= $contact->address ?>,+<?= $contact->zip_code ?>+<?= $contact->city; ?>/ " class="btn-floating unique-color-dark">
+            <a target="_blank" href="https://www.google.com/maps/place/<?= $contact->address ?>,+<?= $contact->zip_code ?>+<?= $contact->city; ?>/ " class="btn-floating color_contact">
               <i class="fas fa-map-marker-alt"></i>
             </a>
             <a target="_blank" href="https://www.google.com/maps/place/<?= $contact->address ?>,+<?= $contact->zip_code ?>+<?= $contact->city; ?>/ " class="text-dark">
@@ -85,7 +90,7 @@
             </a>
           </div>
           <div class="col-md-4">
-            <a href="tel: <?= $contact->phone1; ?>" class="btn-floating unique-color-dark">
+            <a href="tel: <?= $contact->phone1; ?>" class="btn-floating color_contact">
               <i class="fas fa-phone"></i>
             </a>
             <a href="tel: <?= $contact->phone1; ?>" class="text-dark">
@@ -94,7 +99,7 @@
             <p class="mb-md-0"><?= $contact->hours; ?></p>
           </div>
           <div class="col-md-4">
-            <a href="mailto: <?= $contact->email1; ?>" class="btn-floating unique-color-dark">
+            <a href="mailto: <?= $contact->email1; ?>" class="btn-floating color_contact">
               <i class="fas fa-envelope"></i>
             </a>
             <?php if($contact->email1): ?>
